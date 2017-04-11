@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<title>NHL Standings - Metropolitan Division</title>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<!-- IE Rendering Modes http://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx -->
+		<meta http-equiv="x-ua-compatible" content="IE=edge" >
+		<!--<link href="css/normalize.css" rel="stylesheet">-->
+		<style>
+			body {
+				font: 120%/1.2 "Trebuchet MS", Arial, Helvetica, sans-serif;
+			}
+/* STEP 7: Collapse borders */
+			table {
+				border-collapse: collapse;
+				/* STEP 9: Adjust placement of table caption */
+				caption-side: bottom;
+			}
+/* STEP 10b: Zebra striping for columns */
+			tbody tr:nth-child(odd) {
+				background: rgba(0,0,0,0.25);
+			}
+			col:nth-child(2) {
+				background: rgba(100,0,0,0.25);
+			}
+
+			colgroup:nth-of-type(2) col:nth-child(1) {
+				background: rgba(100,0,0,0.25);
+			}
+			colgroup:nth-of-type(2) col:nth-child(2) {
+				background: rgba(0,100,0,0.25);
+			}
+			colgroup:nth-of-type(2) col:nth-child(3) {
+				background: rgba(0,0,100,0.25);
+			}
+
+/* STEP 8: Adjust padding for usability with TH and TD */
+			td, th {
+				border: 1px solid #666;
+				padding: 0.5em;
+			}
+			th {
+				background: rgba(225,225,225,1);
+			}
+/* STEP 6: Align table headings in the table body */
+			tbody th, tbody td {
+				text-align: right;
+			}
+			thead tr:first-child th:first-child {
+				/* Hide top left cell - it's empty */
+				/*border-top: none;
+				border-left: none;
+				background-color: white;*/
+				visibility: hidden;
+			}
+/* STEP 10a: Zebra striping for rows */
+			tbody tr:nth-child(odd) {
+				background-color: rgba(0,0,0,0.25);
+			}
+			tbody tr:hover {
+				background-color: rgba(255,255,255,0.25);
+			}
+
+			tfoot td {
+				font-size: 60%;
+			}
+			caption {
+				font-size: 150%;
+			}
+		</style>
+		<link href="js/tablesort/css/tablesort.css" rel="stylesheet">
+</head>
+
+<body>
+	<article>
+		<header>
+			<h1>NHL Standings - Metropolitan Division</h1>
+		</header>
+		<div class="content">
+<!-- STEP 1a: Start with the basic TABLE element -->
+			<table id="nhlstandings">
+<!-- STEP 2: Build out a fitting CAPTION element -->
+				<caption>NHL Metropolitan Division Standings</caption>
+<!-- STEP 4: Build out column groups and columns if necessary -->
+				<colgroup>
+					<col />
+				</colgroup>
+				<colgroup>
+					<col />
+					<col />
+					<col />
+				</colgroup>
+<!-- STEP 5a: Group the table heading rows with a THEAD -->
+
+<!-- STEP 1b: Build out the appropriate number of rows with TR -->
+			<thead>
+				<tr>
+					<th></th>
+					<th colspan="9">Eastern</th>
+				</tr>
+				<tr>
+					<th scope="col">Metropolitan</th>
+					<th scope="col">Games Played</th>
+                    <th scope="col">Points</th>
+					<th scope="col">Wins</th>
+					<th scope="col">Losses</th>
+                    <th scope="col">OT Losses</th>
+					<th scope="col">Regulation + OT wins</th>
+                    <th scope="col">Goals For</th>
+					<th scope="col">Goals Against</th>
+                    <th scope="col">Difference</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td colspan="10">Adapted from <a href="https://www.nhl.com/standings"  title="View the standings at NHL.com" rel="external">Division Standings - NHL</a></td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<th scope="row"><img src="images/Washington_Capitals.svg.png" alt="Washington Logo" height="30px" width="35px">Washington</th>
+					<td>82</td>
+					<td>118</td>
+					<td>55</td>
+                    <td>19</td>
+					<td>8</td>
+					<td>63</td>
+                    <td>263</td>
+					<td>182</td>
+					<td>81</td>
+				</tr>
+				<tr>
+					<th scope="row"><img src="images/download.png" alt="Pittsburgh Logo" height="30px" width="30px">Pittsburgh</th>
+					<td>82</td>
+					<td>111</td>
+					<td>50</td>
+                    <td>21</td>
+					<td>11</td>
+					<td>61</td>
+                    <td>282</td>
+					<td>234</td>
+					<td>48</td>
+				</tr>
+				<tr>
+					<th scope="row"><img src="images/url.png" alt="Columbus Logo" height="30px" width="30px">Columbus</th>
+					<td>82</td>
+					<td>108</td>
+					<td>50</td>
+                    <td>24</td>
+					<td>8</td>
+					<td>58</td>
+                    <td>249</td>
+					<td>195</td>
+					<td>54</td>
+				</tr>
+				<tr>
+					<th scope="row"><img src="images/imgres.png" alt="Rangers Logo" height="30px" width="30px">NY Rangers</th>
+					<td>82</td>
+					<td>102</td>
+					<td>48</td>
+                    <td>28</td>
+					<td>6</td>
+					<td>54</td>
+                    <td>256</td>
+					<td>220</td>
+					<td>36</td>
+				</tr>
+                <tr>
+					<th scope="row"><img src="images/url-1.png" alt="Islanders Logo" height="30px" width="30px">NY Islanders</th>
+					<td>82</td>
+					<td>94</td>
+					<td>41</td>
+                    <td>29</td>
+					<td>12</td>
+					<td>53</td>
+                    <td>241</td>
+					<td>242</td>
+					<td>-1</td>
+				</tr>
+				<tr>
+					<th scope="row"><img src="images/imgres-1.png" alt="Philadelphia Logo" height="30px" width="30px">Philadelphia</th>
+					<td>82</td>
+					<td>88</td>
+					<td>39</td>
+                    <td>33</td>
+					<td>10</td>
+					<td>43</td>
+                    <td>219</td>
+					<td>236</td>
+					<td>-17</td>
+				</tr>
+                <tr>
+					<th scope="row"><img src="images/imgres-2.png" alt="Carolina Logo" height="30px" width="30px">Carolina</th>
+					<td>82</td>
+					<td>87</td>
+					<td>36</td>
+                    <td>31</td>
+					<td>15</td>
+					<td>51</td>
+                    <td>215</td>
+					<td>236</td>
+					<td>-21</td>
+				</tr>
+				<tr>
+					<th scope="row"><img src="images/url-2.png" alt="New Jersey Logo" height="30px" width="30px">New Jersey</th>
+					<td>82</td>
+					<td>70</td>
+					<td>28</td>
+                    <td>40</td>
+					<td>14</td>
+					<td>42</td>
+                    <td>183</td>
+					<td>244</td>
+					<td>-61</td>
+				</tr>
+			</tbody>
+<!-- STEP 1c: For each piece of table data, build a TD -->
+
+<!-- STEP 3a: Where appropriate, replace any TD elements with table headings (TH) -->
+
+<!-- STEP 3b: Associate TH with data rows and/or columns -->
+
+<!-- STEP 5b: Move the table footer row(s) up to just below the THEAD and surround with a TFOOT -->
+
+<!-- STEP 5c: Encapsulate the remainder of the table data rows with the TBODY tags -->
+	</table>
+			</div><!-- End .content -->
+			<footer>
+				<small>NHL standings</small>
+			</footer>
+		</article>
+		<script src="js/tablesort/tablesort.min.js"></script>
+		<script>
+		// STEP 11: DOM ready event listener
+		document.addEventListener("DOMContentLoaded", function() {
+			// STEP 12: Call to tablesorter script here
+			new Tablesort(document.getElementById('nhlstandings'));
+		});
+		</script>
+</body>
+</html>
